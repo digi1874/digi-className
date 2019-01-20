@@ -19,7 +19,7 @@ const handlerArrayClass = array => {
     const item = array[i]
     if (typeof item !== 'object') {
       // 值为非typeof对象，添加值
-      classNames.push(item)
+      item && classNames.push(item)
     } else if (toString.call(item) === arrayTag) {
       // 值为数组，第1个值为className，第2个值为判断值
       item[1] && classNames.push(item[0])
